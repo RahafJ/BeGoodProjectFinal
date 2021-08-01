@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">BeGoodProject</string>
-
+    <string name="Log_in">Log In</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="forgetPassword">Forget Password</string>
+    <string name="dontHaveAccount">Don\'t have account</string>
+    <string name="SignUp">Sign Up</string>
 </resources>
