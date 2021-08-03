@@ -22,17 +22,16 @@
         android:id="@+id/tvLogIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="casual"
 
+        android:fontFamily="casual"
         android:text="@string/Log_in"
         android:textColor="#03A4FF"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ivLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -41,7 +40,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:drawableStart="@drawable/ic_baseline_email_24"
-        android:text="@string/Email"
+        android:hint="@string/Email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvLogIn"
@@ -61,7 +60,7 @@
         android:ems="10"
         android:inputType="textPassword"
         android:drawableStart="@drawable/et_password"
-        android:text="@string/Password"
+        android:hint="@string/Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress"
