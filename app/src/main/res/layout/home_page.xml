@@ -16,15 +16,58 @@
 
     <TextView
         android:id="@+id/tvhometext"
-        android:layout_width="wrap_content"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
 
         android:background="@drawable/custome_input"
         android:gravity="center|center_horizontal"
         android:padding="40dp"
+        android:backgroundTint="@color/buttonFill"
         android:text="@string/homeTest"
-        app:layout_constraintEnd_toEndOf="parent"
 
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="300dp"
+        android:text="@string/addYourBills"
+        android:textColor="@color/black"
+        app:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvhometext"
+        app:rippleColor="@color/buttonBorders"
+        app:strokeColor="#000000" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shopUsingPoints"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:width="300dp"
+        app:rippleColor="@color/buttonBorders"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
+       />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/PointsYouHave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        android:width="300dp"
+        app:rippleColor="@color/buttonBorders"
+        app:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

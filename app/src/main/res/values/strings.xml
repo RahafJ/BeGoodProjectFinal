@@ -10,5 +10,8 @@
     <string name="forgetPassword">Forget Password</string>
     <string name="dontHaveAccount">Don\'t have account</string>
     <string name="SignUp">Sign Up</string>
+    <string name="addYourBills">Add your bills</string>
+    <string name="shopUsingPoints">Shop using your points</string>
+    <string name="PointsYouHave">you have 45 points</string>
 
 </resources>
