@@ -16,7 +16,11 @@ class MainActivity : AppCompatActivity() {
             Intent(this, SignUp::class.java).also{
                 startActivity(it)
             }
-
+        }
+        btnLogin.setOnClickListener{
+            Intent(this,homepage::class.java).also {
+                startActivity(it)
+            }
         }
     }
 }

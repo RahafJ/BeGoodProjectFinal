@@ -11,6 +11,7 @@
         android:theme="@style/SplashScreenTheme">
 
         <activity android:name=".SignUp"></activity>
+        <activity android:name=".homepage"></activity>
 
         <activity android:name=".MainActivity">
             <intent-filter>
