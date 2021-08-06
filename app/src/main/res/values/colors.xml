@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="Primary_color">#81D4FA</color>
     <color name="buttonBorders">#0093ED</color>
+    <color name="buttonFill">#81D4FA</color>
+    <color name="signUpWord">#03A4FF</color>
 </resources>
