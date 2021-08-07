@@ -142,8 +142,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2"
             app:rippleColor="@color/buttonBorders"
-            app:backgroundTint="@color/Primary_color"
+            app:backgroundTint="@color/white"
             android:textColor="@color/black"
+
             android:background="@drawable/custome_button"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
