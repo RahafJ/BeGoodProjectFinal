@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        />
+
+    <item
+        android:id="@+id/reedemPoints"
+        android:title="Reedem Points"
+        android:icon="@drawable/redeem"
+        />
+
+
+    <item
+        android:id="@+id/advice"
+        android:title="Advice"
+        android:icon="@drawable/advice"
+        />
+
+    <item
+        android:id="@+id/goToShop"
+        android:title="Go to shop"
+        android:icon="@drawable/shop"/>
+
+    <item
+        android:id="@+id/aboutUs"
+        android:title="About Us"
+        android:icon="@drawable/about_us"/>
+
+    <item
+        android:id="@+id/signOut"
+        android:title="Sign Out"
+        android:icon="@drawable/log_out"/>
+</menu>
