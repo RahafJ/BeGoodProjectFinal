@@ -77,14 +77,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Log_in"
-        android:textColor="#000000"
-        app:backgroundTint="@color/Primary_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-        app:rippleColor="@color/Primary_color"
         android:layout_marginTop="10dp"
         android:width="200dp"
+        android:textColor="@color/black"
+        android:background="@drawable/custome_button"
          />
 
     <Button
@@ -125,8 +124,8 @@
             android:text="@string/SignUp"
             android:gravity="left"
             android:backgroundTint="@color/white"
-
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+             />
     </LinearLayout>
 
 

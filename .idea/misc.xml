@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/drawable/advice.xml" value="0.17592592592592593" />
+        <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/drawable/custome_button.xml" value="0.1111111111111111" />
+        <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/layout/activity_bills_layout.xml" value="0.1" />
         <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/layout/activity_main.xml" value="0.18611111111111112" />
+        <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/layout/activity_shop_using_points.xml" value="0.125" />
+        <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/layout/activity_splash.xml" value="0.1" />
+        <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/layout/bill_item.xml" value="0.25416666666666665" />
         <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/layout/home_page.xml" value="0.18611111111111112" />
         <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/layout/sign_up.xml" value="0.18611111111111112" />
         <entry key="..\:/project/BeGoodProjectFinal/app/src/main/res/menu/menu.xml" value="0.10277777777777777" />

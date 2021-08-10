@@ -14,7 +14,7 @@
     <string name="shopUsingPoints">Shop using your points</string>
     <string name="PointsYouHave">you have 45 points</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
-
+    <string name="addYourNewBill">Add your new bill</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
 </resources>

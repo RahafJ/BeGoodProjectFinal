@@ -1,5 +1,6 @@
 package com.example.begoodproject
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -15,6 +16,13 @@ class homepage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setTheme(R.style.Theme_BeGoodProject)
         setContentView(R.layout.home_page)
+
+
+        btnAddBill.setOnClickListener{
+            Intent(this, BillsLayout::class.java).also{
+                startActivity(it)
+            }
+        }
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close )
         drawerLayout.addDrawerListener(toggle)
@@ -40,4 +48,6 @@ class homepage : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+
 }
