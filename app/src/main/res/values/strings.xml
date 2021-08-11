@@ -17,4 +17,7 @@
     <string name="addYourNewBill">Add your new bill</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="about_us_text">We try to find the best way to reduce your water use</string>
+    <string name="BeGood_Team">BeGood Team</string>
+    <string name="advice">Some Advice how you can reduce the water use</string>
 </resources>

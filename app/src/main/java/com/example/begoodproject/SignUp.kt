@@ -1,6 +1,5 @@
 package com.example.begoodproject
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -67,7 +66,7 @@ class SignUp : AppCompatActivity() {
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 startActivity(Intent(this, MainActivity::class.java))
-                                finish()
+//                                finish()
                             }
                         }
                 } else {

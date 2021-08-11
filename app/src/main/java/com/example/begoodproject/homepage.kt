@@ -30,11 +30,19 @@ class homepage : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         nav_view.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.home -> Toast.makeText(applicationContext,"Clicked Home", Toast.LENGTH_LONG).show()
+                R.id.home ->  Intent(this, homepage::class.java).also{ intent ->
+                startActivity(intent)
+            }
+
                 R.id.reedemPoints -> Toast.makeText(applicationContext,"Clicked reedemPoints", Toast.LENGTH_LONG).show()
-                R.id.advice -> Toast.makeText(applicationContext,"Clicked advice", Toast.LENGTH_LONG).show()
+                R.id.advice -> Intent(this, adviceActivity::class.java).also{ intent ->
+                    startActivity(intent)
+                }
                 R.id.goToShop -> Toast.makeText(applicationContext,"Clicked goToShop", Toast.LENGTH_LONG).show()
-                R.id.aboutUs -> Toast.makeText(applicationContext,"Clicked aboutUs", Toast.LENGTH_LONG).show()
+//                R.id.aboutUs -> Toast.makeText(applicationContext,"Clicked aboutUs", Toast.LENGTH_LONG).show()
+                R.id.aboutUs -> Intent(this, aboutUs::class.java).also{ intent ->
+                    startActivity(intent)
+                }
                 R.id.signOut -> Toast.makeText(applicationContext,"Clicked signOut", Toast.LENGTH_LONG).show()
 
             }
