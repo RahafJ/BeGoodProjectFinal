@@ -26,52 +26,43 @@ class MainActivity : AppCompatActivity() {
 
         btnSignUp.setOnClickListener{
             startActivity(Intent(this, SignUp::class.java))
-//            finish()
+            finish()
         }// end sign up button intent function
 
-        btnLogin.setOnClickListener{
-            doLogin()
-
-        }// end log in button intent function
-
+       btnLogin.setOnClickListener {
+           doLogin();
+       }
 
     }
 
     private fun doLogin() {
-                if (!Patterns.EMAIL_ADDRESS.matcher(editTextTextEmailAddress2.text.toString()).matches()){
-                editTextTextEmailAddress2.error="Please Enter Valid Email"
-                editTextTextEmailAddress2.requestFocus()
+                if (!Patterns.EMAIL_ADDRESS.matcher(editTextTextEmailAddress.text.toString()).matches()){
+                    editTextTextEmailAddress.error="Please Enter Valid Email"
+                    editTextTextEmailAddress.requestFocus()
                 return
             }
 
-            if (editTextTextPassword2.text.toString().isEmpty()){
-                editTextTextPassword2.error="Please Enter password"
-                editTextTextPassword2.requestFocus()
+            if (editTextTextPassword.text.toString().isEmpty()){
+                editTextTextPassword.error="Please Enter password"
+                editTextTextPassword.requestFocus()
                 return
             }// end email validation
+        auth.signInWithEmailAndPassword(editTextTextEmailAddress.text.toString(), editTextTextPassword.text.toString())
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    val user = auth.currentUser
+                    updateUI(user)
+                } else {
+                    Toast.makeText(baseContext, "Log in failed.",
+                        Toast.LENGTH_SHORT).show()
+                    updateUI(null)
+                }// end else authentication
 
-            auth.signInWithEmailAndPassword(editTextTextEmailAddress2.toString(),
-                editTextTextPassword2.toString()
-            )
-                .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
+            }// end sign in with email and password
 
-                        val user = auth.currentUser
-                        Toast.makeText(baseContext, "Authentication donr --- 100%.",
-                            Toast.LENGTH_LONG).show()
 
-                        updateUI(user)
-                    } else {
-                        // If sign in fails, display a message to the user.
-                        Toast.makeText(baseContext, "Authentication failed.",
-                            Toast.LENGTH_SHORT).show()
-                        updateUI(null)
-                    }
-                }
         }// end do login function
-
-
 
     public override fun onStart() {
         super.onStart()
@@ -83,13 +74,12 @@ class MainActivity : AppCompatActivity() {
     private fun updateUI(currentUser: FirebaseUser?) {
             if (currentUser !=null ){
                 if(currentUser.isEmailVerified){
-                    Log.d(TAG, "Successfully signed in with email link!")
+                    Toast.makeText(baseContext,"Hiiiiii",Toast.LENGTH_LONG).show()
                     startActivity( Intent(this,homepage::class.java))
-
+                    finish()
                 }else{
-                    Log.e(TAG, "Error signing in with email link")
-//                    Toast.makeText(baseContext, "Please verify your email address .",
-//                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(baseContext, "Please verify your email address .",
+                        Toast.LENGTH_SHORT).show()
                 }
             }
         else{

@@ -66,7 +66,7 @@ class SignUp : AppCompatActivity() {
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 startActivity(Intent(this, MainActivity::class.java))
-//                                finish()
+                                finish()
                             }
                         }
                 } else {
