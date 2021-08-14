@@ -25,17 +25,10 @@ class billAdabter(
         )
     }
 
-
-//    private fun toggleStrikeThrough(tvtime: TextView, tvValue:TextView, tvPoints: Int){
-//
-//    }
-
     fun addToBill(bill: bills){
         billList.add(bill)
         notifyItemInserted(billList.size-1)
     }
-
-
 
     override fun onBindViewHolder(holder: BilsViewHolder, position: Int) {
         val curBill = billList[position]
@@ -45,7 +38,6 @@ class billAdabter(
             tvPoints.text= curBill.points.toString()
         }
     }
-
     override fun getItemCount(): Int {
         return billList.size
     }

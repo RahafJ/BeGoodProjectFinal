@@ -15,12 +15,8 @@ import kotlinx.android.synthetic.main.shop_item.*
 class ShopActivity : AppCompatActivity() {
 
     private lateinit var dbref:  DatabaseReference
-
     private lateinit var rvShopitem :RecyclerView
-
-
     private lateinit var shopArrayList: ArrayList<ShopItem>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,34 +25,29 @@ class ShopActivity : AppCompatActivity() {
         rvShopitem=findViewById(R.id.rvShop)
         rvShopitem.layoutManager=LinearLayoutManager(this)
 
+
         rvShopitem.setHasFixedSize(true)
 
         shopArrayList = arrayListOf<ShopItem>()
 
         getShopItem()
-
-
     }// end on create
 
     private fun getShopItem() {
         dbref = FirebaseDatabase.getInstance().getReference("shopItem")
         dbref.addValueEventListener(object : ValueEventListener{
 
-
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
                     for(shopSnapshot in snapshot.children){
                         val item = shopSnapshot.getValue(ShopItem::class.java)
                         shopArrayList.add(item!!)
-                    }
-
+                    }// end for
                     rvShopitem.adapter=ShopAdapter(shopArrayList)
                 }// end if
-
             }
-
             override fun onCancelled(error: DatabaseError) {
-
+                Toast.makeText(baseContext,"Failed",Toast.LENGTH_LONG).show()
             }
 
         })

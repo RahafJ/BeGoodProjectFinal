@@ -9,34 +9,39 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardElevation="8dp"
-        app:cardCornerRadius="8dp"
         android:background="@color/buttonFill"
-        >
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/buttonFill">
+
             <TextView
                 android:id="@+id/tvtime"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="TextView"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:padding="5dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/tvValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:padding="16dp"
                 android:text="TextView"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:padding="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvtime" />
 
@@ -44,10 +49,10 @@
                 android:id="@+id/tvPoints"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:padding="5dp"
                 android:text="TextView"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:padding="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvValue" />
         </androidx.constraintlayout.widget.ConstraintLayout>
