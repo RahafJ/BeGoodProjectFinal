@@ -20,4 +20,10 @@
     <string name="about_us_text">We try to find the best way to reduce your water use</string>
     <string name="BeGood_Team">BeGood Team</string>
     <string name="advice">Some Advice how you can reduce the water use</string>
+    <string name="addBill1Value">Add You Bill Value : </string>
+    <string name="take_photo">Take a photo to your bill</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="email">Email</string>
 </resources>

@@ -1,39 +1,52 @@
 package com.example.begoodproject
 
+import android.media.tv.TvView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import java.util.*
-import kotlin.collections.ArrayList
+import kotlinx.android.synthetic.main.bill_item.view.*
 
-class billAdabter (private val billList : ArrayList<bills>) : RecyclerView.Adapter<billAdabter.billsViewHolder> (){
+class billAdabter(
+    private var  billList:MutableList<bills>
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): billsViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.bill_item,parent, false)
-        return billsViewHolder(itemView)
+):RecyclerView.Adapter<billAdabter.BilsViewHolder>(){
+
+  class BilsViewHolder(itemView:View):RecyclerView.ViewHolder(itemView)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BilsViewHolder {
+        return BilsViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.bill_item,
+                parent,
+                false
+            )
+        )
     }
 
-    override fun onBindViewHolder(holder: billsViewHolder, position: Int) {
-        val currentItem = billList[position]
 
-        holder.Date.text= currentItem.date.toString()
-        holder.cost.text=currentItem.cost
-        holder.points.text = currentItem.points.toString()
+//    private fun toggleStrikeThrough(tvtime: TextView, tvValue:TextView, tvPoints: Int){
+//
+//    }
+
+    fun addToBill(bill: bills){
+        billList.add(bill)
+        notifyItemInserted(billList.size-1)
+    }
 
 
 
+    override fun onBindViewHolder(holder: BilsViewHolder, position: Int) {
+        val curBill = billList[position]
+        holder.itemView.apply {
+            tvtime.text = curBill.date.toString()
+            tvValue.text = curBill.cost
+            tvPoints.text= curBill.points.toString()
+        }
     }
 
     override fun getItemCount(): Int {
         return billList.size
     }
-
-    class billsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        val Date: TextView = itemView.findViewById(R.id.tvtime)
-        val cost :TextView = itemView.findViewById(R.id.tvValue)
-        val points : TextView = itemView.findViewById(R.id.tvPoints)
-    }
-
 }

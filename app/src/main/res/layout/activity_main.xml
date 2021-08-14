@@ -11,9 +11,9 @@
         android:id="@+id/ivLogo"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:layout_margin="50dp"
+        android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+android:foregroundGravity="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dropwater_finalone" />
@@ -102,31 +102,37 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/custome_button"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="172dp"
+        android:layout_marginRight="172dp"
+        android:gravity="right"
+        android:text="@string/dontHaveAccount"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnForgetPassword"
+        app:layout_constraintVertical_bias="0.375"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="100dp"
         android:layout_height="50dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/white"
+        android:gravity="left"
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="right"
-            android:text="@string/dontHaveAccount" />
-
-        <Button
-            android:id="@+id/btnSignUp"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:text="@string/SignUp"
-            android:gravity="left"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/black"
-             />
-    </LinearLayout>
+        android:text="@string/SignUp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/btnForgetPassword"
+        app:layout_constraintVertical_bias="0.318" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
